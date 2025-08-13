@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recicla Comuna 4</title>
+    <link rel="stylesheet" href="estilos asistencia.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Asistencia</h1>
+        
+        <form>
+            <!-- RF1.2.1 -->
+            <div class="card">
+                <h2>Marcar asistencia</h2>
+                <select id="asistencia" name="asistencia">
+                    <option value="presente">Asistió</option>
+                    <option value="ausente">Faltó</option>
+                    <option value="tarde">Llegó tarde</option>
+                </select>
+            </div>
+
+            <!-- RF1.2.2 -->
+            <div class="card">
+                <h2>Observaciones</h2>
+                <textarea id="observaciones" name="observaciones" placeholder="Escribe observaciones si el usuario llegó tarde o no asistió"></textarea>
+            </div>
+
+            <!-- RF1.2.3 -->
+            <div class="card">
+                <h2>Generar reporte</h2>
+                <label class="checkbox">
+                    <input type="checkbox" id="reporte" name="reporte">
+                    <span>Generar reporte de asistencia por jornada</span>
+                </label>
+            </div>
+
+            <button type="submit">Guardar Registro</button>
+        </form>
+    </div>
+</body>
+</html>
+

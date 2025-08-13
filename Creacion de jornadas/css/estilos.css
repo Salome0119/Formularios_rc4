@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh; /* MUY importante */
+    background-image: url('https://i.pinimg.com/1200x/c5/43/a3/c543a37f145a68fa675f37593e41f2b4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fuente */
+    color: #000000; /* color del texto dentro del formulario */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Blanco con 80% de opacidad */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 500px;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;      /* Centrado vertical */
+    justify-content: space-between; /* Texto a la izq, form a la der */
+    padding: 0 40px;
+}
+
+/* Texto a la izquierda */
+.left-text {
+    color:#8bf492;
+    max-width: 700px;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;      /* centra el texto dentro del contenedor */
+    height: 100%;   
+    padding-left: 130px;
+}
+
+.left-text h1 {
+    line-height: 1.2;
+    
+}
+
+/* Fondo del formulario */
+.form-container {
+    max-width: 600px;
+    padding: 60px 30px; /* más alto visualmente */
+    background-color: rgba(72, 97, 78, 0.5);
+    border-top-left-radius: 90px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 90px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+        
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+   
+button {        
+    display: block;
+    width: 100%; 
+    padding: 10px;        
+    background-color: #8bca8f;        
+    border: none;        
+    color: rgb(0, 0, 0);        
+    font-size: 16px;        
+    border-radius: 4px;        
+    cursor: pointer;
+}
+        
+button:hover {        
+    background-color: #218838;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+

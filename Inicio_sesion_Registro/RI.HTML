@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso ReciclaC4</title>
+    <link rel="stylesheet" href="styles-simple.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Sty.css">
+</head>
+<body>
+    <main class="card">
+        <div class="slider">
+            <div class="track">
+                <section class="panel" id="login">
+                    <header class="header"><span class="icon">🏠</span><h2>Acceso Residente</h2></header>
+                    <form action="#">
+                        <div class="field"><label for="login-email">Correo</label><input type="email" id="login-email"></div>
+                        <div class="field"><label for="login-pass">Contraseña</label><input type="password" id="login-pass"></div>
+                        <button type="submit" class="btn">Ingresar</button>
+                        <p class="footer-link">¿No tienes cuenta? <a href="#register">Regístrate</a></p>
+                    </form>
+                </section>
+                <section class="panel" id="register">
+                    <header class="header"><span class="icon">📝</span><h3>Crear Cuenta</h3></header>
+                    <form action="#">
+                        <div class="field"><label for="reg-name">Nombre</label><input type="text" id="reg-name"></div>
+                        <div class="field"><label for="reg-email">Correo</label><input type="email" id="reg-email"></div>
+                        <div class="field"><label for="reg-pass">Contraseña</label><input type="password" id="reg-pass"></div>
+                        <div class="field"><label for="reg-address">Dirección</label><input type="text" id="reg-address" placeholder="Ej: Torre 1, Apto 203"></div>
+                        <button type="submit" class="btn">Crear Cuenta</button>
+                        <p class="footer-link">¿Ya tienes cuenta? <a href="#login">Inicia Sesión</a></p>
+                    </form>
+                </section>
+                <section class="panel" id="admin">
+                    <header class="header"><span class="icon">⚙️</span><h2>Acceso Admin</h2></header>
+                    <form action="#">
+                        <div class="field"><label for="admin-email">Correo Admin</label><input type="email" id="admin-email"></div>
+                        <div class="field"><label for="admin-pass">Contraseña</label><input type="password" id="admin-pass"></div>
+                        <button type="submit" class="btn admin-btn">Ingresar al Panel</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+        <nav class="dots">
+            <a href="#login" class="dot" title="Residente"></a>
+            <a href="#admin" class="dot" title="Admin"></a>
+        </nav>
+    </main>
+</body>
+</html>

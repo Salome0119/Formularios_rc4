@@ -1,0 +1,95 @@
+:root {
+    --green-dark: #389E3F; --green-medium: #8AD78F; --green-bg: #c1ffc6;
+    --green-bg-light: #E6F7D1; --text-dark: #224424; --white: #ffffff;
+    --border-color: #cce8cf; --admin-color: #264653;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--green-bg-light), var(--green-bg));
+    margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    width: 100%; max-width: 400px;
+    position: relative;
+    height: 480px; 
+    transition: height 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.card:has(#register:target) {
+    height: 600px;
+}
+#register .field {
+    margin-bottom: 0.7rem; 
+}
+
+#register .field input {
+    padding: 8px 10px;    
+    font-size: 0.80rem;     
+}
+
+.slider {
+    width: 100%; height: 100%; overflow: hidden;
+}
+
+.track {
+    display: flex; width: 300%; height: 100%;
+    transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.panel {
+    width: 33.333%; padding: 1.5rem 3rem; box-sizing: border-box;
+}
+
+#login:target ~ .slider .track,
+:target:not(#register):not(#admin) ~ .slider .track {
+    transform: translateX(0%);
+}
+#register:target ~ .slider .track {
+    transform: translateX(-33.333%);
+}
+#admin:target ~ .slider .track {
+    transform: translateX(-66.666%);
+}
+
+.header { text-align: center; margin-bottom: 1.5rem; }
+.icon { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; color: var(--green-dark); }
+.header h2 { margin: 0; font-weight: 600; font-size: 1.5rem; }
+.field { margin-bottom: 1rem; }
+.field label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+.field input { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 8px; box-sizing: border-box; }
+.field input:focus { outline: none; border-color: var(--green-dark); }
+.btn { width: 100%; padding: 12px; margin-top: 1rem; color: var(--white); background-color: var(--green-dark); border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: background-color 0.3s ease; }
+.admin-btn { background-color: var(--admin-color); }
+.footer-link { text-align: center; margin-top: 1.5rem; font-size: 0.9rem; }
+.footer-link a { color: var(--green-dark); font-weight: 600; text-decoration: none; }
+
+.dots {
+    position: absolute; bottom: 1.5rem; left: 50%;
+    transform: translateX(-50%); display: flex; gap: 0.8rem;
+    transition: bottom 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#register:target ~ .dots {
+    bottom: 0.8rem;
+}
+
+.dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background-color: var(--border-color); transition: all 0.3s ease;
+}
+
+:target ~ .dots a[href="#login"],
+#register:target ~ .dots a[href="#login"] {
+    background-color: var(--green-dark);
+}
+#admin:target ~ .dots a[href="#admin"] {
+    background-color: var(--admin-color);
+}
+#admin:target ~ .dots a[href="#login"] {
+    background-color: var(--border-color);
+}
